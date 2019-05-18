@@ -23,6 +23,9 @@ echo "ansible:Password1"'!' | /sbin/chpasswd
 mkdir -p /home/ansible/.ssh
 fi
 
+# Add ansible user to wheel group to perform sudo
+echo "Add ansible user to wheel (to become sudo) group"
+usermod -aG wheel ansible
 
 
 echo "Setup the autorization keys..."
