@@ -42,8 +42,7 @@ if [ ! -s /etc/sudoers.d/ansible ]
 then
 echo "User ansible sudoers does not exists, will add..."
 cat << 'EOF' > /etc/sudoers.d/ansible
-User_Alias ANSIBLE_AUTOMATION = %ansible
-ANSIBLE_AUTOMATION ALL=(ALL) NOPASSWD; ALL
+%ansible ALL=(ALL) NOPASSWD: ALL
 EOF
 chmod 400 /etc/sudoers.d/ansible
 fi
