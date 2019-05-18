@@ -1,8 +1,15 @@
 #!/bin/bash
 #
-# chmod +x setup-remote-ansible-user.sh
-# 
 # Create ansible user for Ansible automation and configuration management.
+# 
+# Set permissions on file to be executable:
+#   chmod +x setup-remote-ansible-user.sh
+# 
+# Run as: 
+#   ssh root@ansibleclient 'bash -s' < setup-remote-ansible-user.sh
+#
+# Check the result:
+#   ssh ansible@ansibleclient
 
 
 # Create ansible user
